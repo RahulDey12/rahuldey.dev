@@ -6,7 +6,7 @@
     "watch": "npm run dev -- --watch",
     "prod": "webpack --mode=production",
     "start": "webpack serve --mode=development",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo 'rahuldey.dev' > ./dist/CNAME && gh-pages -d dist"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
