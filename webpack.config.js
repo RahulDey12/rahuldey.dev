@@ -11,7 +11,7 @@ module.exports = (_env, options) => {
         entry: ['./src/js/app.js', './src/scss/app.scss'],
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'js/app.js',
+            filename: 'js/app.[contenthash].js',
             pathinfo: isProduction,
             clean: true,
         },
@@ -62,7 +62,7 @@ module.exports = (_env, options) => {
         plugins: [
             new WebpackBar(),
             new MiniCssExtractPlugin({
-                filename: 'css/app.css'
+                filename: 'css/app.[contenthash].css'
             }),
             new HtmlWebpackPlugin({
                 template: 'public/index.html'
